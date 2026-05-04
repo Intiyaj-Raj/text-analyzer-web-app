@@ -8,7 +8,9 @@
 <div align=\"center\">
 
 ## 🎬 **Screenshot**
-
+<img width="1890" height="900" alt="Image" src="https://github.com/user-attachments/assets/211e0fbb-861f-4b31-b75c-113f67fe47e1" />
+<br />
+<img width="1881" height="911" alt="Image" src="https://github.com/user-attachments/assets/11550228-205e-41b0-927e-f49aa5667608" />
 
 
 **Intiyaj Ansari's Text Analyzer – Transform Text with Magic! ✨**
