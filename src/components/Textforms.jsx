@@ -60,30 +60,82 @@ const Textforms = () => {
         clearTimeout(timeRef.current)
     }
 
+
+    // toggle btn 
+
+    const [mystyle, setMystyle] = useState(
+        // creating object 
+        {
+            color: "white",
+            backgroundColor: "black",
+            border: "1px solid white"
+        }
+    )
+
+    const toggleBtn = () => {
+        if (mystyle.color === 'black') {
+            setMystyle({
+                color: "white",
+                backgroundColor: "black",
+                border: "1px solid white"
+            })
+        }
+        else {
+            setMystyle({
+                color: "black",
+                backgroundColor: "white",
+                border: "1px solid black"
+            })
+        }
+    }
+
     return (
-        <div className="container my-5 black-shadow ">
-            <div className="card shadow-lg p-4 bg-dark-subtle">
-                <h3 className="mb-3 text-center">😍 Text Analyzer 😍</h3>
-                <div className="mb-3">
-                    <h5 className='mb-3'>Enter the text to analyze below</h5>
-                    <textarea
-                        className="form-control bg-dark-subtle "
-                        rows="11"
-                        placeholder="Type or paste your text here..."
-                        value={text}
-                        onChange={handleOnChange}
-                    ></textarea>
-                </div>
-                <div className="d-flex justify-content-center align-items-center gap-2 flex-wrap">
-                    <button className="btn btn-outline-secondary" onClick={handleUpClick}>Uppercase</button>
-                    <button className="btn btn-outline-secondary" onClick={handleLoClick}>LowerCase</button>
-                    <button className="btn btn-outline-secondary" onClick={handleTitleCase}>Captialize</button>
-                    <button className="btn btn-outline-secondary" onClick={handleExtraSpace}>Clean Text</button>
+        <div style={mystyle} >
+            <div className="container py-5 black-shadow ">
+                <div className="card shadow-lg p-4" style={mystyle}>
+                    <div className="d-flex justify-content-between align-items-center">
 
-                    <button className="btn btn-outline-danger" onClick={handleClear}>Clear</button>
-                    <button className="btn btn-outline-success" onClick={handleCopy}>Copy</button>
+                        <h3 className="mb-0 text-center w-100">
+                            😍 Text Analyzer 😍
+                        </h3>
 
+                        <div className="form-check form-switch">
+                            <input
+                                className="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="switchCheckDefault"
+                                onClick={toggleBtn}
+                            />
+                        </div>
+
+                    </div>
+                    <div className="mb-3" >
+                        <h5 className='mb-3'>Enter the text to analyze below</h5>
+                        <textarea
+                            className="form-control"
+                            rows="11"
+                            placeholder="Type or paste your text here..."
+                            value={text}
+                            style={mystyle}
+                            onChange={handleOnChange}
+                        ></textarea>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                        <button className="btn btn-outline-secondary" onClick={handleUpClick}>Convert to Uppercase</button>
+                        <button className="btn btn-outline-secondary" onClick={handleLoClick}>Convert to LowerCase</button>
+                        <button className="btn btn-outline-secondary" onClick={handleTitleCase}>Convert to Captialize</button>
+                        <button className="btn btn-outline-secondary" onClick={handleExtraSpace}>Clean Text</button>
+
+                        <button className="btn btn-outline-danger" onClick={handleClear}>Clear Text</button>
+                        <button className="btn btn-outline-success" onClick={handleCopy}>Copy Text</button>
+                    </div>
                 </div>
+            </div>
+            {/* text previewer */}
+            <div className="container mb-3" >
+                <h4 className='mb-3 text-center underline'>Text Previewer</h4>
+                <p>{text}</p>
             </div>
         </div>
     )
