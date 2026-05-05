@@ -95,9 +95,9 @@ const Textforms = () => {
                 <div className="card shadow-lg p-4" style={mystyle}>
                     <div className="d-flex justify-content-between align-items-center">
 
-                        <h3 className="mb-0 text-center w-100">
+                        <h2 className="mb-4 text-center w-100">
                             😍 Text Analyzer 😍
-                        </h3>
+                        </h2>
 
                         <div className="form-check form-switch">
                             <input
@@ -111,7 +111,8 @@ const Textforms = () => {
 
                     </div>
                     <div className="mb-3" >
-                        <h5 className='mb-3'>Enter the text to analyze below</h5>
+                        <h4 className='mb-3 text-center text-body-secondary'>Paste or type any text to get word count, character stats, reading <br /> time, and more — instantly.
+                        </h4>
                         <textarea
                             className="form-control"
                             rows="11"
@@ -132,9 +133,13 @@ const Textforms = () => {
                     </div>
                 </div>
             </div>
+
             {/* text previewer */}
             <div className="container mb-3" >
-                <h4 className='mb-3 text-center underline'>Text Previewer</h4>
+                <h3>Your Text Summary</h3>
+                <p className='fw-bold m-0 p-0 text-info'>{text.split(" ").length} words and {text.length} Characters</p>
+                <p className='fw-bold m-0 p-0 text-info'>{0.008 * text.split(" ").length} Minutes Read Time</p>
+                <h3 className='mb-3 text-center underline'>Text Previewer</h3>
                 <p>{text}</p>
             </div>
         </div>
