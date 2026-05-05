@@ -7,11 +7,11 @@
 
 <div align=\"center\">
 
-## 🎬 **Live Demo Animations**
+## 🎬 **Screenshot**
+<img width="1890" height="900" alt="Image" src="https://github.com/user-attachments/assets/211e0fbb-861f-4b31-b75c-113f67fe47e1" />
+<br />
+<img width="1881" height="911" alt="Image" src="https://github.com/user-attachments/assets/11550228-205e-41b0-927e-f49aa5667608" />
 
-<img src=\"https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnd1d2Y0czd1b3NjM2I0eWltNXhkNGV6bWZuemw0eGg4YW9qYmNxMCZjdD1n/eIeNrQohbRMqM/giphy.gif\" alt=\"Typing Animation\" width=\"250\"/>
-<img src=\"https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif\" alt=\"Clear Animation\" width=\"250\"/>
-<img src=\"https://media.giphy.com/media/26ufnwz3wDUll5JKe/giphy.gif\" alt=\"Copy Success\" width=\"250\"/>
 
 **Intiyaj Ansari's Text Analyzer – Transform Text with Magic! ✨**
 
@@ -37,14 +37,11 @@
 
 ## 🛠 **Tech Stack**
 
-```mermaid
-graph TD
-    A[React 19.2.5 Hooks] --> B[useState text]
-    A --> C[useRef timeouts]
-    D[Vite 8.0 HMR] --> E[Fast Dev Server]
-    F[Bootstrap 5.3] --> G[Responsive UI]
-    A --> F
-```
+React.js (Frontend library) <br/>
+🟨 JavaScript (Logic) <br/>
+🎨 HTML5 <br/>
+🎨 CSS3 / Bootstrap (UI styling) <br/>
+🧠 React Hooks (useState, useRef) <br/>
 
 - **Performance**: Debounced onChange, timeout clears
 - **Zero extra deps**: Pure React + Bootstrap CDN
