@@ -71,7 +71,7 @@ const Textforms = (props) => {
                         </h2>
                     </div>
                     <div className="mb-3" >
-                        <h4 className='mb-3 text-center'>Paste or type any text to get word count, character stats, reading <br /> time, and more — instantly.
+                        <h4 className='mb-4 text-center'>Paste or type any text to get word count, character stats, reading <br /> time, and more — instantly.
                         </h4>
                         <textarea
                             className={`form-control border border-${props.mode === "light" ? "dark" : "light"} bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75`}

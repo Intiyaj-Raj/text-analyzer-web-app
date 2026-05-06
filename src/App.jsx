@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import About from './components/About'
 const App = () => {
 
   const [mode, setMode] = useState("light")
@@ -24,6 +25,7 @@ const App = () => {
       <Navbar mode={mode} toggleMode={toggleMode} />
       <Routes>
         <Route path='/' element={<Textforms mode={mode} toggleMode={toggleMode} />} />
+        <Route path='/about' element={<About mode={mode} />} />
       </Routes>
       <Footer mode={mode} />
     </BrowserRouter>

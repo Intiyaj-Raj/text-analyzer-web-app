@@ -29,27 +29,28 @@ const Navbar = (props) => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    {/* Collapse Content */}
+
                     <div className="collapse navbar-collapse" id="navbarCollapse">
 
-                        {/* Nav Links */}
+
                         <ul className="navbar-nav me-auto mb-2 mb-md-0">
                             <li className="nav-item">
                                 <Link className="nav-link active" to="/">Home</Link>
                             </li>
 
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">About</Link>
+                                <Link className="nav-link" to="/about">About</Link>
                             </li>
                         </ul>
 
-                        {/* Toggle Button (hidden on mobile, inside menu) */}
+                        {/* Toggle Button */}
                         <div className={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"} ms-md-3`}>
                             <input
                                 className="form-check-input"
                                 onClick={props.toggleMode}
                                 type="checkbox"
                                 id="switchCheckDefault"
+                                style={{ cursor: "pointer" }}
                             />
                             <label className="form-check-label" htmlFor="switchCheckDefault">
                                 Dark Mode
