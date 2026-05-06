@@ -11,7 +11,7 @@ const Alert = (props) => {
                 className="container d-flex justify-content-center position-absolute"
 
                 style={{
-                    top: "40%",
+                    bottom: "40%",
                     left: "50%",
                     transform: "translateX(-50%)",
                     zIndex: 9999

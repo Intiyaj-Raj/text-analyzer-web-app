@@ -148,7 +148,7 @@ const Textforms = (props) => {
                         </p>
 
                     </div>
-                    <h3 className={`mb-3 text-center underline text-${props.mode === "light" ? 'dark' : 'light'}`}>Text Preview</h3>
+                    <h3 className={`my-3 text-center underline text-${props.mode === "light" ? 'dark' : 'light'}`}>Text Preview</h3>
                     <div className={`card-shadow p-4 rounded border border-${props.mode === "light" ? "dark" : "light"} bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75`} style={{ textAlign: "justify" }}>
                         <p >{text}</p>
                     </div>
