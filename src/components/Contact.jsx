@@ -18,7 +18,7 @@ const Contact = () => {
             <div className="row justify-content-center">
                 <div className="col-md-6">
 
-                    {/* Card */}
+
                     <div className="card shadow-lg border-0 rounded-4 p-4 bg-light">
 
                         <form onSubmit={handleSubmit}>
