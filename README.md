@@ -12,7 +12,14 @@
 <br />
 <img width="1881" height="911" alt="Image" src="https://github.com/user-attachments/assets/11550228-205e-41b0-927e-f49aa5667608" />
 
-
+## 🎬 Updated **Screenshots**
+<img width="1891" height="919" alt="Image" src="https://github.com/user-attachments/assets/c583431e-8828-4c6e-99f3-9b3718c40cc5" />
+<img width="1891" height="789" alt="Image" src="https://github.com/user-attachments/assets/e26ca61e-d51f-473b-9867-23c09d413854" />
+<img width="1890" height="916" alt="Image" src="https://github.com/user-attachments/assets/d35e3b42-4df5-4119-80b5-b70ca52f98fb" />
+<img width="1886" height="801" alt="Image" src="https://github.com/user-attachments/assets/027f0b32-1e7c-431d-9c9e-055fa03c3f67" />
+<img width="1899" height="914" alt="Image" src="https://github.com/user-attachments/assets/353f0b92-0849-4065-8d93-94e142aa0bcc" />
+<img width="1892" height="754" alt="Image" src="https://github.com/user-attachments/assets/aa60cd9d-132f-4122-b4b0-5dce2882eb71" />
+<img width="1890" height="747" alt="Image" src="https://github.com/user-attachments/assets/325abb7d-3410-469c-8f6d-b492b49d9804" />
 **Intiyaj Ansari's Text Analyzer – Transform Text with Magic! ✨**
 
 </div>
