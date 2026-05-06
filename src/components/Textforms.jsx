@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-const Textforms = () => {
+const Textforms = (props) => {
 
     const [text, setText] = useState("Hi, my name is Intiyaj Ansari. I am a BTech student and a frontend developer. I have skills in HTML, CSS, and JavaScript. I enjoy building websites and web applications. I have worked on projects like a Text Analyzer app, a movie ticket booking app, and a portfolio website. I am learning new technologies and improving my skills every day. For more details, you can search my name on Google")
 
@@ -60,38 +60,10 @@ const Textforms = () => {
     }
 
 
-    // toggle btn 
-
-    // const [mystyle, setMystyle] = useState(
-    //     // creating object 
-    //     {
-    //         color: "white",
-    //         backgroundColor: "black",
-    //         border: "1px solid white"
-    //     }
-    // )
-
-    // const toggleBtn = () => {
-    //     if (mystyle.color === 'black') {
-    //         setMystyle({
-    //             color: "white",
-    //             backgroundColor: "black",
-    //             border: "1px solid white"
-    //         })
-    //     }
-    //     else {
-    //         setMystyle({
-    //             color: "black",
-    //             backgroundColor: "white",
-    //             border: "1px solid black"
-    //         })
-    //     }
-    // }
-
     return (
-        <div  >
-            <div className="container py-5 black-shadow my-5">
-                <div className="card shadow-lg p-4" >
+        <div className='my-5'>
+            <div className={"container py-5 black-shadow"}>
+                <div className={`card shadow-lg p-4 bg-${props.mode === "light" ? "light" : "dark"} text-${props.mode === 'light' ? 'dark' : 'light'}`} >
                     <div className="d-flex justify-content-between align-items-center">
 
                         <h2 className="mb-4 text-center w-100">
@@ -99,10 +71,10 @@ const Textforms = () => {
                         </h2>
                     </div>
                     <div className="mb-3" >
-                        <h4 className='mb-3 text-center text-body-secondary'>Paste or type any text to get word count, character stats, reading <br /> time, and more — instantly.
+                        <h4 className='mb-3 text-center'>Paste or type any text to get word count, character stats, reading <br /> time, and more — instantly.
                         </h4>
                         <textarea
-                            className="form-control"
+                            className={`form-control border border-${props.mode === "light" ? "dark" : "light"} bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75`}
                             rows="11"
                             placeholder="Type or paste your text here..."
                             value={text}
@@ -123,12 +95,16 @@ const Textforms = () => {
             </div>
 
             {/* text previewer */}
-            <div className="container mb-3" >
-                <h3>Your Text Summary</h3>
-                <p className='fw-bold m-0 p-0 text-info'>{text.split(" ").length} words and {text.length} Characters</p>
-                <p className='fw-bold m-0 p-0 text-info'>{0.008 * text.split(" ").length} Minutes Read Time</p>
-                <h3 className='mb-3 text-center underline'>Text Previewer</h3>
-                <p>{text}</p>
+            <div className='container'>
+                <div className={`p-5 rounded text-${props.mode === 'light' ? 'dark' : 'light'} bg-${props.mode === "light" ? "light" : "dark"} text-${props.mode === 'light' ? 'dark' : 'light'}`} >
+                    <h3>Your Text Summary</h3>
+                    <p className='fw-bold m-0 p-0 text-info'>{text.split(" ").length} words and {text.length} Characters</p>
+                    <p className='fw-bold m-0 p-0 text-info'>{0.008 * text.split(" ").length} Minutes Read Time</p>
+                    <h3 className={`mb-3 text-center underline text-${props.mode === "light" ? 'dark' : 'light'}`}>Text Preview</h3>
+                    <div className={`card-shadow p-4 rounded border border-${props.mode === "light" ? "dark" : "light"} bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75`} style={{ textAlign: "justify" }}>
+                        <p >{text}</p>
+                    </div>
+                </div>
             </div>
         </div>
     )
