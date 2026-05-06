@@ -58,7 +58,8 @@ const Textforms = (props) => {
         // when type→ timeout cancel
         clearTimeout(timeRef.current)
     }
-
+    const words = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+    const chars = text.trim().length;
 
     return (
         <div className='my-5'>
@@ -97,8 +98,8 @@ const Textforms = (props) => {
             <div className='container'>
                 <div className={`p-5 rounded text-${props.mode === 'light' ? 'dark' : 'light'} bg-${props.mode === "light" ? "light" : "dark"} text-${props.mode === 'light' ? 'dark' : 'light'}`} >
                     <h3>Your Text Summary</h3>
-                    <p className='fw-bold m-0 p-0 text-info'>{text.split(" ").length} words and {text.length} Characters</p>
-                    <p className='fw-bold m-0 p-0 text-info'>{0.008 * text.split(" ").length} Minutes Read Time</p>
+                    <p className='fw-bold m-0 p-0 text-info'>{words} words and {chars} Characters</p>
+                    <p className='fw-bold m-0 p-0 text-info'>{0.008 * words} Minutes Read Time</p>
                     <h3 className={`mb-3 text-center underline text-${props.mode === "light" ? 'dark' : 'light'}`}>Text Preview</h3>
                     <div className={`card-shadow p-4 rounded border border-${props.mode === "light" ? "dark" : "light"} bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75`} style={{ textAlign: "justify" }}>
                         <p >{text}</p>
