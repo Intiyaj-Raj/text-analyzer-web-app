@@ -65,7 +65,6 @@ const Textforms = (props) => {
             <div className={"container py-5 black-shadow"}>
                 <div className={`card shadow-lg p-4 bg-${props.mode === "light" ? "light" : "dark"} text-${props.mode === 'light' ? 'dark' : 'light'}`} >
                     <div className="d-flex justify-content-between align-items-center">
-
                         <h2 className="mb-4 text-center w-100">
                             😍 Text Analyzer 😍
                         </h2>

@@ -24,7 +24,7 @@ const About = (props) => {
                 <div className="row g-4">
 
                     <div className="col-md-6">
-                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
+                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "info-subtle" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
                             <h4>What is this app?</h4>
                             <p style={{ textAlign: "justify" }}>
                                 Text Analyzer is a web app that helps you quickly analyze your
@@ -35,7 +35,7 @@ const About = (props) => {
                     </div>
 
                     <div className="col-md-6">
-                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
+                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "info-subtle" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
                             <h4>Why use it?</h4>
                             <p style={{ textAlign: "justify" }}>
                                 This app is fast, simple, and user-friendly. It saves time and
@@ -50,7 +50,7 @@ const About = (props) => {
                 <div className="row g-4 mt-3">
 
                     <div className="col-md-4">
-                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
+                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "info-subtle" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
                             <h5 className={`text-${props.mode === "light" ? "info" : "warning"}`}>
                                 Uppercase / Lowercase
                             </h5>
@@ -59,7 +59,7 @@ const About = (props) => {
                     </div>
 
                     <div className="col-md-4">
-                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
+                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "info-subtle" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
                             <h5 className={`text-${props.mode === "light" ? "info" : "warning"}`}>
                                 Clean Text
                             </h5>
@@ -68,7 +68,7 @@ const About = (props) => {
                     </div>
 
                     <div className="col-md-4">
-                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
+                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "info-subtle" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
                             <h5 className={`text-${props.mode === "light" ? "info" : "warning"}`}>
                                 Copy & Use
                             </h5>
@@ -85,7 +85,7 @@ const About = (props) => {
 
 
                     <div className="col-md-4">
-                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
+                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "info-subtle" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
                             <h5 className={`text-${props.mode === "light" ? "info" : "warning"}`}>
                                 Your Text Summary
                             </h5>
@@ -96,7 +96,7 @@ const About = (props) => {
 
 
                     <div className="col-md-8">
-                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
+                        <div className={`card shadow-sm border border-light p-4 h-100 bg-${props.mode === "light" ? "info-subtle" : "secondary"} bg-opacity-75 text-${props.mode === "light" ? "dark" : "light"}`}>
                             <h5 className={`text-${props.mode === "light" ? "info" : "warning"}`}>
                                 Text Preview
                             </h5>
@@ -110,7 +110,7 @@ const About = (props) => {
             </div>
 
             <div className="container pb-5">
-                <div className="card shadow-sm border border-light p-4 text-center">
+                <div className={`card shadow-sm border border-light p-4 text-center bg-${props.mode === "light" ? "success-subtle" : "danger-subtle"}`}>
                     <h5 className={`text-${props.mode === "light" ? "info" : "warning"}`}>
                         Text Actions
                     </h5>

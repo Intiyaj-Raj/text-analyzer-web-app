@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/text-analyze.png';
+import logo from '../assets/text-analyze.svg';
 
 const Navbar = (props) => {
     return (
         <header>
-            <nav className={`navbar navbar-expand-md navbar-${props.mode} bg-${props.mode} fixed-top border-bottom border-${props.mode === 'light' ? 'dark' : 'light'}`}>
+            <nav className={`navbar navbar-expand-md navbar-${props.mode === 'light' ? 'light' : 'dark'} bg-${props.mode === 'light' ? 'light' : 'dark'} fixed-top border-bottom border-${props.mode === 'light' ? 'dark' : 'light'}`}>
                 <div className="container-fluid">
 
                     {/* Logo */}
@@ -13,10 +13,10 @@ const Navbar = (props) => {
                         <img
                             src={logo}
                             alt="logo"
-                            className="px-2"
-                            style={{ height: "40px" }}
+                            className="px-2 rounded bg-light p-1 py-2"
+                            style={{ height: "60px", transform: "rotate(-5deg)" }}
                         />
-                        Text Analyzer
+
                     </Link>
 
                     {/* Menu Toggle Button */}
@@ -41,19 +41,34 @@ const Navbar = (props) => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about">About</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact">Contact</Link>
+                            </li>
                         </ul>
 
                         {/* Toggle Button */}
                         <div className={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"} ms-md-3`}>
                             <input
                                 className="form-check-input"
-                                onClick={props.toggleMode}
+                                onClick={props.setDarkMode}
                                 type="checkbox"
                                 id="switchCheckDefault"
                                 style={{ cursor: "pointer" }}
                             />
                             <label className="form-check-label" htmlFor="switchCheckDefault">
                                 Dark Mode
+                            </label>
+                        </div>
+                        <div className={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"} ms-md-3`}>
+                            <input
+                                className="form-check-input"
+                                onClick={props.setBlueMode}
+                                type="checkbox"
+                                id="switchCheckDefault"
+                                style={{ cursor: "pointer" }}
+                            />
+                            <label className="form-check-label" htmlFor="switchCheckDefault">
+                                Blue Mode
                             </label>
                         </div>
 

@@ -5,7 +5,7 @@ const Footer = (props) => {
     return (
         <footer
             className={`py-4 mt-5 text-center bg-${props.mode === "light" ? "light" : "dark"
-                } text-${props.mode === "light" ? "dark" : "light"}`}
+                } text-${props.mode === "light" ? "dark" : "light"}  border border-top border-dark`}
         >
             <div className="container">
 
