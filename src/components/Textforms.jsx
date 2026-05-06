@@ -98,8 +98,21 @@ const Textforms = (props) => {
             <div className='container'>
                 <div className={`p-5 rounded text-${props.mode === 'light' ? 'dark' : 'light'} bg-${props.mode === "light" ? "light" : "dark"} text-${props.mode === 'light' ? 'dark' : 'light'}`} >
                     <h3>Your Text Summary</h3>
-                    <p className='fw-bold m-0 p-0 text-info'>{words} words and {chars} Characters</p>
-                    <p className='fw-bold m-0 p-0 text-info'>{0.008 * words} Minutes Read Time</p>
+                    <div className="p-3 rounded shadow-sm bg-info-subtle text-dark mt-3">
+
+                        <p className="m-0 fw-semibold">
+                            📊 <span className="text-info">{words}</span> words •
+                            <span className="text-warning"> {chars}</span> characters
+                        </p>
+
+                        <p className="m-0 mt-2 fw-semibold">
+                            ⏱️ Read Time:
+                            <span className="badge bg-success ms-1">
+                                {(0.008 * words).toFixed(2)} min
+                            </span>
+                        </p>
+
+                    </div>
                     <h3 className={`mb-3 text-center underline text-${props.mode === "light" ? 'dark' : 'light'}`}>Text Preview</h3>
                     <div className={`card-shadow p-4 rounded border border-${props.mode === "light" ? "dark" : "light"} bg-${props.mode === "light" ? "light" : "secondary"} bg-opacity-75`} style={{ textAlign: "justify" }}>
                         <p >{text}</p>
