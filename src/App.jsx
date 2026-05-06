@@ -1,9 +1,17 @@
 import React from 'react'
 import Textforms from './components/Textforms'
 import "./App.css";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 const App = () => {
   return (
-    <Textforms />
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Textforms />} />
+      </Routes>
+
+    </BrowserRouter>
   )
 }
 

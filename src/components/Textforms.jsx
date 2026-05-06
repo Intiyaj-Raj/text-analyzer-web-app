@@ -34,7 +34,6 @@ const Textforms = () => {
     }
     function handleCopy() {
         navigator.clipboard.writeText(text)
-        alert("Text copied successfully 👍")
     }
 
 
@@ -63,52 +62,41 @@ const Textforms = () => {
 
     // toggle btn 
 
-    const [mystyle, setMystyle] = useState(
-        // creating object 
-        {
-            color: "white",
-            backgroundColor: "black",
-            border: "1px solid white"
-        }
-    )
+    // const [mystyle, setMystyle] = useState(
+    //     // creating object 
+    //     {
+    //         color: "white",
+    //         backgroundColor: "black",
+    //         border: "1px solid white"
+    //     }
+    // )
 
-    const toggleBtn = () => {
-        if (mystyle.color === 'black') {
-            setMystyle({
-                color: "white",
-                backgroundColor: "black",
-                border: "1px solid white"
-            })
-        }
-        else {
-            setMystyle({
-                color: "black",
-                backgroundColor: "white",
-                border: "1px solid black"
-            })
-        }
-    }
+    // const toggleBtn = () => {
+    //     if (mystyle.color === 'black') {
+    //         setMystyle({
+    //             color: "white",
+    //             backgroundColor: "black",
+    //             border: "1px solid white"
+    //         })
+    //     }
+    //     else {
+    //         setMystyle({
+    //             color: "black",
+    //             backgroundColor: "white",
+    //             border: "1px solid black"
+    //         })
+    //     }
+    // }
 
     return (
-        <div style={mystyle} >
-            <div className="container py-5 black-shadow ">
-                <div className="card shadow-lg p-4" style={mystyle}>
+        <div  >
+            <div className="container py-5 black-shadow my-5">
+                <div className="card shadow-lg p-4" >
                     <div className="d-flex justify-content-between align-items-center">
 
                         <h2 className="mb-4 text-center w-100">
                             😍 Text Analyzer 😍
                         </h2>
-
-                        <div className="form-check form-switch">
-                            <input
-                                className="form-check-input"
-                                type="checkbox"
-                                role="switch"
-                                id="switchCheckDefault"
-                                onClick={toggleBtn}
-                            />
-                        </div>
-
                     </div>
                     <div className="mb-3" >
                         <h4 className='mb-3 text-center text-body-secondary'>Paste or type any text to get word count, character stats, reading <br /> time, and more — instantly.
@@ -118,7 +106,7 @@ const Textforms = () => {
                             rows="11"
                             placeholder="Type or paste your text here..."
                             value={text}
-                            style={mystyle}
+
                             onChange={handleOnChange}
                         ></textarea>
                     </div>
