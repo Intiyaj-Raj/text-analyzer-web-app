@@ -3,6 +3,7 @@ import Textforms from './components/Textforms'
 import "./App.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 const App = () => {
 
   const [mode, setMode] = useState("light")
@@ -24,7 +25,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Textforms mode={mode} toggleMode={toggleMode} />} />
       </Routes>
-
+      <Footer mode={mode} />
     </BrowserRouter>
   )
 }
